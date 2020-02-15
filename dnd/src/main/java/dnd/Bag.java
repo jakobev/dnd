@@ -17,7 +17,7 @@ public class Bag{
      */
     public ArrayList<Weapon> fillBag(){
         weaponBag.add(wp);
-        System.out.println("weapoongbag " + wp);
+        System.out.println("Bag Klasse in fillBag method " + wp);
         return weaponBag;
     }
   
@@ -27,8 +27,6 @@ public class Bag{
 public ArrayList<Weapon> getWeaponBag() {
     return weaponBag;
 }
-public String toString(){
-    return "test";
-}
+
 
 }

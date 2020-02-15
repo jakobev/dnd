@@ -12,11 +12,10 @@ public class App
 
         Bag bag = new Bag();
         System.out.println( "Hello World!" );
-        System.out.println("wp weapon " + bag.wp.toString());
+        System.out.println("Main Klasse bag.wp.toString " + bag.wp.toString());
         bag.fillBag();
-        System.out.println( bag.toString());
-        System.out.println( bag.getWeaponBag());
-        System.out.println("weapon bag " + bag.weaponBag.toString());
+        //System.out.println( bag.getWeaponBag());
+        System.out.println("Main Klasse bag.weaponBag liste to String " + bag.weaponBag.toString());
 
         //Test Person class
         System.out.println("Person class test");

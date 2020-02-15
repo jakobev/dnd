@@ -30,6 +30,11 @@ public class Weapon extends Item{
         System.out.println("Damage: " + this.damage + " " + "Health: " + this.health);
     }
 
+    @Override
+    public String toString() {
+        return "weapon Klasse: this is da weapon";
+    }
+
     
     
     
