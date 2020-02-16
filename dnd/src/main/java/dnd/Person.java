@@ -8,6 +8,10 @@ public class Person {
     double weight;
     int life;
 
+    public Person(){
+        
+    }
+
     public Person(String name, int age, double height, double weight, int life){
         this.name = name;
         this.age = age;

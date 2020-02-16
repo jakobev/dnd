@@ -18,7 +18,7 @@ public class Bag{
      */
     public ArrayList<Weapon> fillBag(){
         weaponBag.add(wp);
-        System.out.println("Bag Klasse in fillBag method " + wp);
+        // System.out.println("Bag Klasse in fillBag method " + wp);
         return weaponBag;
     }
     

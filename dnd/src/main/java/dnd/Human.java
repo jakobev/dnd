@@ -6,6 +6,10 @@ public class Human extends Person {
 
     int loveLevel = 100;
 
+    public Human(){
+        
+    }
+
     public Human(String name, int age, double height, double weight, int life, int loveLevel) {
         super(name, age, height, weight, life);
         this.loveLevel = loveLevel;
