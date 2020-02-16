@@ -12,10 +12,7 @@ public class App
 
         Bag bag = new Bag();
         System.out.println( "Hello World!" );
-        System.out.println("Main Klasse bag.wp.toString " + bag.wp.toString());
         bag.fillBag();
-        //System.out.println( bag.getWeaponBag());
-        System.out.println("Main Klasse bag.weaponBag liste to String " + bag.weaponBag.toString());
 
         //Test Person class
         System.out.println("Person class test");
@@ -30,7 +27,7 @@ public class App
 
         //Test Man class
         System.out.println("Man class test");
-        Man testMan = new Man("Marv", 27, 1.83, 75, 100, 100, 18, bag.getWeaponBag());
+        Man testMan = new Man("Marv", 27, 1.83, 75, 100, 100, 18, bag.getWeaponBagWeapons());
 
 
         //Test Woman class

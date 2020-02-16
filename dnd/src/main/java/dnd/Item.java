@@ -4,10 +4,12 @@ package dnd;
 public class Item{
 
     int rarity;
+    String name;
 
 
-    public Item(int rarity){
+    public Item(int rarity, String name){
         this.rarity = rarity;
+        this.name = name;
     }
 
     /**
@@ -15,5 +17,12 @@ public class Item{
      */
     public int getRarity() {
         return rarity;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
     }
 }

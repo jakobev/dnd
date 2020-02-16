@@ -6,8 +6,8 @@ public class Weapon extends Item{
     int damage = 0;
     int health = 100;
 
-    public Weapon(int rarity, int damage, int health) {
-        super(rarity);
+    public Weapon(int rarity, int damage, int health, String name) {
+        super(rarity, name);
         this.damage = damage;
         this.health = health;
     }
@@ -27,12 +27,13 @@ public class Weapon extends Item{
 
 
     public void showWeaponStats(){
-        System.out.println("Damage: " + this.damage + " " + "Health: " + this.health);
+        System.out.println("Name: " + this.name + " " + "Damage: " + this.damage + " " + "Health: " + this.health);
     }
+    
 
     @Override
     public String toString() {
-        return "weapon Klasse: this is da weapon";
+        return "Name: " + this.name + " " + "Damage: " + this.damage + " " + "Health: " + this.health;
     }
 
     
