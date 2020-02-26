@@ -1,9 +1,10 @@
 package dnd;
 
-
+import com.opencsv.bean.CsvBindByName;
 
 public class Human extends Person {
 
+    @CsvBindByName(column = "Love Level")
     int loveLevel = 100;
 
     public Human(){

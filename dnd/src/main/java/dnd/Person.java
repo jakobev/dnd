@@ -1,11 +1,18 @@
 package dnd;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class Person {
 
+    @CsvBindByName(column = "Name")
     String name;
+    @CsvBindByName(column = "Age")
     int age;
+    @CsvBindByName(column = "Height")
     double height;
+    @CsvBindByName(column = "weight")
     double weight;
+    @CsvBindByName(column = "Life")
     int life;
 
     public Person(){

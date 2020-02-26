@@ -7,7 +7,7 @@ public class Bag{
     ArrayList<Weapon> weaponBag = new ArrayList<Weapon>();
 
     //Test Weapon
-    Weapon wp = new Weapon(100, 60, 50, "Todesschlitzer");
+    // Weapon wp = new Weapon(100, 60, 50, "Todesschlitzer");
     //this.weaponBag.add(wp);
 
 
@@ -16,10 +16,9 @@ public class Bag{
      * 
      * @return ArrayList<Weapon>
      */
-    public ArrayList<Weapon> fillBag(){
+    public void fillBag(Sword wp){
         weaponBag.add(wp);
         // System.out.println("Bag Klasse in fillBag method " + wp);
-        return weaponBag;
     }
     
   

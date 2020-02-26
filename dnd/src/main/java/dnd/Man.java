@@ -1,22 +1,41 @@
 package dnd;
 
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.List;
 
-public class Man extends Human{
+import com.opencsv.CSVWriter;
+import com.opencsv.bean.CsvBindByName;
+import java.io.FileReader;
 
+public class Man extends Human {
+
+    @CsvBindByName(column = "Penis Length")
     int penisLength;
     ArrayList<Weapon> testBag;
     ArrayList<Weapon> weapon;
+    //testing weapon
+    @CsvBindByName(column = "Weapon")
+    Sword singleWeapon;
+    Bag bag;
+
+     
+  
+
 
     public Man(){
         
     }
 
-    public Man(String name, int age, double height, double weight, int life, int loveLevel, int penisLength, ArrayList<Weapon> arrayList) {
+    public Man(String name, int age, double height, double weight, int life, int loveLevel, int penisLength, ArrayList<Weapon> arrayList, Sword singleWeapon, Bag bag) {
         super(name, age, height, weight, life, loveLevel);
         this.penisLength = penisLength;
         // this.testBag = arrayList;
         this.weapon = arrayList;
+        this.singleWeapon = singleWeapon;
+        this.bag = bag;
     }
 
     /**
@@ -39,6 +58,14 @@ public class Man extends Human{
 //Dependency Injection
     public void setWeapons(ArrayList<Weapon> weapons){
         this.weapon = weapons;
+    }
+
+    public Sword getSingleWeapon() {
+        return singleWeapon;
+    }
+
+    public void setSingleWeapon(Sword singleWeapon) {
+        this.singleWeapon = singleWeapon;
     }
 
 }

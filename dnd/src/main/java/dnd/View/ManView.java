@@ -1,22 +1,35 @@
 package dnd.View;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.opencsv.CSVWriter;
+
+import dnd.Bag;
+import dnd.Sword;
 import dnd.Weapon;
 
 public class ManView {
 
     Scanner scanner = new Scanner(System.in);
+    // testing, later i will instance an object and pass data
     String name;
     int age;
-    double height; 
-    double weight; 
+    double height;
+    double weight;
     int life;
     int loveLevel;
     int penisLength;
     ArrayList<Weapon> arrayList;
     String input = "";
+    // test weapon
+    Sword sword;
+    Bag bag;
 
     public String getName() {
         return name;
@@ -82,11 +95,16 @@ public class ManView {
         this.arrayList = arrayList;
     }
 
-    public ManView(){
+    public ManView() throws IOException {
         this.getValues();
     }
 
-    private void getValues(){
+    private void getValues() throws IOException {
+
+        
+
+        //TODO
+        //validierungen
         
             System.out.println("Wie soll dein Char heißen? Gib einen Namen ein \n und hit Enter");
             this.setName(scanner.nextLine());
@@ -100,6 +118,24 @@ public class ManView {
             System.out.println("Wie schwer dein Char ? Gib einen Gewicht ein \n und hit Enter");
             this.setWeight(Double.valueOf(scanner.nextLine()));
 
+            System.out.println("Schwert als Anfangswaffe.....test? J/N");
+
+            input = scanner.nextLine();
+            if(input.equals("J")){
+                System.out.println("Sie bekommen zum Anfang ein Standardschwert :D hehehe lol opfer");
+                Sword sword = new Sword(1, 1, 20, "TestSchwert", 1, "Schwert");
+                System.out.println(sword);
+                this.setSword(sword);
+                bag = new Bag();
+                bag.fillBag(sword);
+                
+            }
+            
+            
+
+
+            System.out.println("Ihr Charackter wurde erfolgreich erstellt!");
+
         }
 
         public void showInfo(){
@@ -108,7 +144,18 @@ public class ManView {
             System.out.println("Dein alter ist " + this.getAge());
             System.out.println("Deine groesse ist " + this.getHeight());
             System.out.println("Dein gewicht ist " + this.getWeight());
+            System.out.println("Deine Waffe ist " + this.getSword());
 
             
         }
+
+        public Sword getSword() {
+            return sword;
+        }
+
+        public void setSword(Sword sword) {
+            this.sword = sword;
+        }
+
+       
 }
